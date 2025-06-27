@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>stremio-desktop-v5</id>
+    <version>5.0.18</version>
+    <title>Stremio Desktop v5</title>
+    <authors>Zarg</authors>
+    <owners>Zarg</owners>
+    <projectUrl>https://github.com/Zaarrg/stremio-desktop-v5</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/zaarrg/stremio-desktop-v5/webview-windows/images/stremio.png</iconUrl>
+    <description>Stremio Desktop v5 Community app with the latest Stremio web UI v5, built with WebView2</description>
+    <packageSourceUrl>https://github.com/Zaarrg/stremio-desktop-v5</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/Zaarrg/stremio-desktop-v5/issues</bugTrackerUrl>
+    <docsUrl>https://github.com/Zaarrg/stremio-desktop-v5#-stremio-desktopcommunity</docsUrl>
+    <summary>Stremio Community build using WebView2. Supports latest features. Always up to date with Stremio web v5. Full MPV player support like local files, hdr, dolby atmos and dv content.</summary>
+    <releaseNotes>See https://github.com/Zaarrg/stremio-desktop-v5/releases for changes.</releaseNotes>
+    <tags>stremio video streaming media</tags>
+    <licenseUrl>https://github.com/Zaarrg/stremio-desktop-v5/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
