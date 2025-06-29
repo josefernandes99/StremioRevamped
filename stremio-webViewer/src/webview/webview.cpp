@@ -4,6 +4,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 #include <Shlwapi.h>
 #include <wrl.h>
 #include "../core/globals.h"
@@ -293,10 +294,12 @@ void InitWebView2(HWND hWnd)
                     SetupWebMessageHandler();
 
                     std::thread([](){
-                        std::wcout << L"[WEBVIEW]: Checking web ui endpoints..." << std::endl;
-                        std::wstring foundUrl = GetFirstReachableUrl();
-                        std::wstring* pResult = new std::wstring(foundUrl);
-                        g_webuiUrl = foundUrl;
+                        wchar_t exePath[MAX_PATH];
+                        GetModuleFileNameW(nullptr, exePath, MAX_PATH);
+                        std::filesystem::path exeDir = std::filesystem::path(exePath).parent_path();
+                        std::filesystem::path indexPath = exeDir / L"webapp" / L"index.html";
+                        g_webuiUrl = indexPath.wstring();
+                        std::wstring* pResult = new std::wstring(g_webuiUrl);
                         PostMessage(g_hWnd, WM_REACHABILITY_DONE, (WPARAM)pResult, 0);
                         FetchAndParseWhitelist();
                     }).detach();
